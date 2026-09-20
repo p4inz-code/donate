@@ -3,129 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Support Atharva's work · P4inz</title>
-<meta name="description" content="Support Kanvaz and other tools by Atharva Patil (P4inz) with a UPI donation. Any amount, straight from your UPI app.">
-<meta name="theme-color" content="#0d0a1a">
-<meta property="og:title" content="Support Atharva's work · P4inz">
-<meta property="og:description" content="A UPI donation, any amount. Thank you for the support.">
+<title>Support my work · P4inz</title>
+<meta name="description" content="Support Kanvaz and my other tools with a UPI donation. Any amount.">
+<meta name="theme-color" content="#140b26">
 <style>
-  :root{
-    --bg:#0d0a1a; --line:rgba(255,255,255,.14); --text:#f4f1ff; --muted:#b6b0d6;
-    --v1:#7c3aed; --v2:#a855f7; --v3:#c084fc;
-  }
-  *{box-sizing:border-box;margin:0}
+  :root{--bg:#140b26;--panel:#1c1236;--line:#33244f;--text:#efeaff;--muted:#b3a9d1;--accent:#7c3aed;--accent-hi:#9b6bff}
+  *{box-sizing:border-box}
+  html{background:var(--bg)}
   body{
-    min-height:100vh;color:var(--text);background:var(--bg);
-    font-family:ui-rounded,"SF Pro Rounded","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.55;display:grid;place-items:center;align-content:center;justify-items:center;
-    padding:max(24px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom));
+    margin:0;min-height:100vh;color:var(--text);background:var(--bg);
+    font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:max(28px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));
   }
-  .bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:
-    radial-gradient(60vmax 60vmax at 15% -10%,rgba(124,58,237,.45),transparent 60%),
-    radial-gradient(50vmax 50vmax at 95% 105%,rgba(168,85,247,.32),transparent 60%),
-    var(--bg)}
+  main{max-width:420px;margin:0 auto}
 
-  main{width:100%;max-width:440px;display:grid;justify-items:center;text-align:center;gap:22px;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}}
+  .who{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+  .who img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--line);display:block}
+  .who b{display:block;font-size:1.05rem}
+  .who span{color:var(--muted);font-size:.92rem}
 
-  .card{
-    width:100%;padding:clamp(24px,6vw,36px);border-radius:26px;display:grid;justify-items:center;gap:18px;
-    background:rgba(255,255,255,.06);border:1px solid var(--line);
-    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-    box-shadow:0 24px 70px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.08);
-  }
-  .mono{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-weight:800;font-size:1.05rem;
-    background:linear-gradient(135deg,var(--v1),var(--v3));box-shadow:0 10px 28px rgba(124,58,237,.5)}
-  h1{font-size:clamp(1.55rem,6vw,2rem);line-height:1.15;letter-spacing:-.02em}
-  h1 span{background:linear-gradient(90deg,#ddd0ff,#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .msg{color:#d9d4f4;max-width:34ch}
-
-  .qrbox{padding:10px;border-radius:24px;background:linear-gradient(135deg,var(--v1),var(--v3));box-shadow:0 16px 44px rgba(124,58,237,.42)}
-  .qr{width:min(220px,62vw);aspect-ratio:808/880;background:#fff;border-radius:16px;overflow:hidden;display:grid;place-items:center}
-  .qr img{width:112%;height:auto;display:block;margin:-6% 0}
-  .scan{color:var(--muted);font-size:.92rem}
-
-  .idrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
-  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(0,0,0,.35);border:1px solid var(--line);padding:11px 14px;border-radius:12px;font-size:.98rem}
-  .copy{appearance:none;min-height:44px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--text);font:inherit;font-weight:700;font-size:.9rem;padding:0 16px;border-radius:12px;cursor:pointer;transition:background .2s}
-  .copy:hover{background:rgba(255,255,255,.16)}
+  h1{font:400 2.1rem/1.2 Georgia,"Iowan Old Style","Palatino Linotype",serif;margin:0 0 14px}
+  p{margin:0 0 14px}
+  .small{color:var(--muted);font-size:.93rem}
 
   .pay{
-    display:none;align-items:center;justify-content:center;gap:8px;width:100%;min-height:54px;padding:0 22px;border-radius:16px;
-    color:#fff;font-weight:800;font-size:1.05rem;text-decoration:none;
-    background:linear-gradient(120deg,#6d28d9,#7c3aed);box-shadow:0 14px 34px rgba(124,58,237,.45);
-    transition:transform .15s, filter .2s;
+    display:none;justify-content:center;align-items:center;min-height:52px;margin:22px 0 6px;padding:0 20px;border-radius:12px;
+    background:var(--accent);color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none;
   }
-  .pay:hover{transform:translateY(-2px);filter:brightness(1.08)}
-  .pay:active{transform:none}
+  .pay:hover{background:var(--accent-hi)}
 
-  /* phones: the button is the way to pay, a QR you cannot scan on your own screen is hidden.
-     computers: the QR is the way to pay, a upi:// button would do nothing. */
-  @media (hover:none) and (pointer:coarse){ .pay{display:flex} .qrbox,.scan{display:none} }
+  .qr{display:block;width:230px;max-width:100%;margin:22px 0 10px;background:#fff;border-radius:14px;overflow:hidden;aspect-ratio:808/880;border:1px solid var(--line)}
+  .qr img{display:block;width:112%;height:auto;margin:-6% 0 0 -6%}
 
-  a:focus-visible,button:focus-visible{outline:3px solid #e9d5ff;outline-offset:3px}
-  footer{color:#a29cc6;font-size:.82rem;text-align:center;margin-top:18px}
-  footer a{color:#d8c7ff}
+  .id{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+  code{font:1rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--panel);border:1px solid var(--line);padding:10px 12px;border-radius:8px}
+  button{font:inherit;font-size:.92rem;min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
+  button:hover{background:var(--panel)}
 
-  .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,24px);opacity:0;background:#1c1733;border:1px solid var(--line);padding:11px 18px;border-radius:12px;font-weight:700;transition:.3s}
-  .toast.on{opacity:1;transform:translate(-50%,0)}
-  #burst{position:fixed;inset:0;pointer-events:none}
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  /* On a phone the button opens the UPI app. On a computer there is no UPI app, so the QR is shown instead. */
+  @media (hover:none) and (pointer:coarse){.pay{display:flex}.qr,.scan{display:none}}
+
+  a:focus-visible,button:focus-visible{outline:3px solid #cdb8ff;outline-offset:3px}
+  footer{margin-top:42px;color:#9a8fbb;font-size:.85rem}
+  footer a{color:#cdb8ff}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--line);padding:10px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.on{opacity:1}
 </style>
 </head>
 <body>
-<div class="bg" aria-hidden="true"></div>
-<canvas id="burst" aria-hidden="true"></canvas>
-
 <main>
-  <section class="card" aria-labelledby="t">
-    <div class="mono" aria-hidden="true">P4</div>
-    <h1 id="t"><span>Thank you</span> for the support</h1>
-    <p class="msg">If my work has been useful to you, a donation of any amount helps me keep building. Every bit means a lot.</p>
+  <div class="who">
+    <img src="pfp.jpg" alt="P4inz profile picture" width="64" height="64">
+    <div><b>Atharva Patil</b><span>P4inz</span></div>
+  </div>
 
-    <a class="pay" id="pay" href="upi://pay?pa=9321614988@jio&amp;pn=Atharva%20Patil&amp;cu=INR&amp;tn=Support%20P4inz">Donate via UPI <span aria-hidden="true">💜</span></a>
+  <h1>Support my work</h1>
+  <p>I make Kanvaz and a few other tools on my own, and they're free. If one of them saved you some time and you feel like chipping in, any amount helps. Thank you.</p>
+  <p class="small">No account and no subscription. It's a one-time UPI payment, and you pick the amount in your app.</p>
 
-    <div class="qrbox"><div class="qr"><img src="upi-qr.jpeg" alt="UPI QR code for Atharva Patil, scan with any UPI app" width="808" height="880"></div></div>
-    <p class="scan">Scan with any UPI app. You choose the amount.</p>
+  <a class="pay" id="pay" href="upi://pay?pa=9321614988@jio&amp;pn=Atharva%20Patil&amp;cu=INR&amp;tn=Support%20P4inz">Pay with UPI</a>
 
-    <div class="idrow"><code id="upiId">9321614988@jio</code><button class="copy" id="copy" type="button" aria-label="Copy UPI ID">Copy</button></div>
-  </section>
+  <div class="qr"><img src="upi-qr.jpeg" alt="UPI QR code for Atharva Patil. Scan it with any UPI app." width="808" height="880"></div>
+  <p class="small scan">Scan with any UPI app.</p>
 
+  <div class="id"><code id="upiId">9321614988@jio</code><button id="copy" type="button" aria-label="Copy UPI ID">Copy</button></div>
+
+  <footer>Atharva Patil | P4inz | Northbyte Studios · <a href="https://github.com/p4inz-code/kanvaz">Kanvaz on GitHub</a></footer>
 </main>
-<footer>Atharva Patil | P4inz | Northbyte Studios · <a href="https://github.com/p4inz-code/kanvaz">Kanvaz on GitHub</a></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
 <script>
 (function(){
-  var UPI='9321614988@jio';
-  var $=function(i){return document.getElementById(i);};
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function toast(t){var e=$('toast');e.textContent=t;e.classList.add('on');setTimeout(function(){e.classList.remove('on');},1700);}
-
-  var cv=$('burst'),cx=cv.getContext('2d'),parts=[],raf=0,dpr=devicePixelRatio||1;
-  function fit(){cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;}fit();addEventListener('resize',fit);
-  function heart(x,y,r){cx.beginPath();cx.moveTo(x,y+r*.35);cx.bezierCurveTo(x-r*1.6,y-r*.6,x-r*.5,y-r*1.5,x,y-r*.5);cx.bezierCurveTo(x+r*.5,y-r*1.5,x+r*1.6,y-r*.6,x,y+r*1.25);cx.fill();}
-  function hearts(x,y){
-    if(reduce) return;
-    var cols=['#7c3aed','#a855f7','#c084fc','#e9d5ff','#ffffff'];
-    for(var i=0;i<26;i++){var a=-Math.PI/2+(Math.random()-.5)*2.2,s=(3+Math.random()*5)*dpr;
-      parts.push({x:x*dpr,y:y*dpr,vx:Math.cos(a)*s,vy:Math.sin(a)*s,r:(4+Math.random()*5)*dpr,c:cols[i%cols.length],l:1});}
-    if(!raf) raf=requestAnimationFrame(tick);
-  }
-  function tick(){
-    cx.clearRect(0,0,cv.width,cv.height);
-    for(var i=parts.length-1;i>=0;i--){var p=parts[i];p.vy+=.12*dpr;p.x+=p.vx;p.y+=p.vy;p.l-=.014;
-      if(p.l<=0){parts.splice(i,1);continue;}cx.globalAlpha=p.l;cx.fillStyle=p.c;heart(p.x,p.y,p.r);}
-    cx.globalAlpha=1;raf=parts.length?requestAnimationFrame(tick):0;
-  }
-
-  $('copy').addEventListener('click',function(){
-    var r=this.getBoundingClientRect();
-    function ok(){toast('UPI ID copied');hearts(r.left+r.width/2,r.top);}
-    function fb(){var g=document.createRange();g.selectNodeContents($('upiId'));var s=getSelection();s.removeAllRanges();s.addRange(g);try{document.execCommand('copy');ok();}catch(e){toast('Select the ID and copy it');}}
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(UPI).then(ok,fb);}else fb();
+  var UPI='9321614988@jio', t=document.getElementById('toast');
+  function say(m){t.textContent=m;t.classList.add('on');setTimeout(function(){t.classList.remove('on');},1500);}
+  document.getElementById('copy').addEventListener('click',function(){
+    function ok(){say('UPI ID copied');}
+    function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('upiId'));var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');ok();}catch(e){say('Select the ID and copy it');}}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(UPI).then(ok,fallback);}else{fallback();}
   });
-  $('pay').addEventListener('click',function(e){hearts(e.clientX,e.clientY);});
 })();
 </script>
 </body>
