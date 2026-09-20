@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donate via UPI</title>
+<style>body{font-family:system-ui,sans-serif;text-align:center;padding:8vh 1rem;background:#0e0e10;color:#e8e8f0}a.btn{display:inline-block;background:#5F259F;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-size:18px}img{width:220px;max-width:70vw;border-radius:12px;margin-top:1.5rem}code{background:#1c1c22;padding:3px 8px;border-radius:6px}</style>
+</head><body>
+<h1>Thank you 💜</h1>
+<p>Tap the button to open your UPI app.</p>
+<p><a class="btn" id="pay" href="upi://pay?pa=9321614988@jio&amp;pn=Atharva%20Patil&amp;cu=INR">Pay with UPI</a></p>
+<p>UPI ID: <code>9321614988@jio</code></p>
+<p>On a computer? Scan this with any UPI app:</p>
+<img src="upi-qr.jpeg" alt="UPI QR code">
+<script>if(/Android|iPhone|iPad/i.test(navigator.userAgent)){setTimeout(function(){location.href=document.getElementById("pay").href;},400);}</script>
+</body></html>
