@@ -11,9 +11,9 @@
   *{box-sizing:border-box}
   html{background:var(--bg)}
   /* faint repeating watermark of my GitHub name */
-  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='170'><g transform='rotate(-24 140 85)' fill='%23b79bff' fill-opacity='0.075' font-family='Georgia,serif' font-size='20'><text x='10' y='70'>github.com/p4inz-code</text><text x='150' y='150'>p4inz-code</text></g></svg>") repeat}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='170'><g transform='rotate(-24 140 85)' fill='%23b79bff' fill-opacity='0.09' font-family='Georgia,serif' font-size='20'><text x='10' y='70'>github.com/p4inz-code</text><text x='150' y='150'>p4inz-code</text></g></svg>") repeat}
   body{
-    margin:0;min-height:100vh;color:var(--text);background:var(--bg);
+    margin:0;min-height:100vh;color:var(--text);
     font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     padding:max(28px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));
   }
