@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 170" width="860" height="170" role="img" aria-label="Support this project: donate by UPI">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1140"><animate attributeName="stop-color" values="#1b1140;#2a1058;#1b1140" dur="8s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#2b1160"><animate attributeName="stop-color" values="#2b1160;#1d1450;#2b1160" dur="8s" repeatCount="indefinite"/></stop></linearGradient>
+ <linearGradient id="btn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset=".55" stop-color="#a855f7"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+ <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ddd0ff"/><stop offset=".6" stop-color="#c084fc"/><stop offset="1" stop-color="#e9d5ff"/></linearGradient>
+ <radialGradient id="g1" cx=".15" cy=".2" r=".6"><stop offset="0" stop-color="#7c3aed" stop-opacity=".55"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+ <radialGradient id="g2" cx=".9" cy=".85" r=".6"><stop offset="0" stop-color="#a855f7" stop-opacity=".45"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/></radialGradient>
+ <clipPath id="c"><rect width="860" height="170" rx="22"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+ <rect width="860" height="170" fill="url(#bg)"/>
+ <rect width="860" height="170" fill="url(#g1)"/><rect width="860" height="170" fill="url(#g2)"/>
+ <g fill="#fff" opacity=".18"><circle cx="330" cy="30" r="2"><animate attributeName="cy" values="30;22;30" dur="4s" repeatCount="indefinite"/></circle><circle cx="470" cy="140" r="2.4"><animate attributeName="cy" values="140;130;140" dur="5s" repeatCount="indefinite"/></circle><circle cx="640" cy="24" r="1.8"><animate attributeName="cy" values="24;32;24" dur="6s" repeatCount="indefinite"/></circle><circle cx="250" cy="146" r="1.6"/></g>
+</g>
+<rect x=".75" y=".75" width="858.5" height="168.5" rx="21.5" fill="none" stroke="#ffffff" stroke-opacity=".14" stroke-width="1.5"/>
+<g transform="translate(88 85)"><circle r="40" fill="url(#btn)" opacity=".2"><animate attributeName="r" values="36;46;36" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".3;.05;.3" dur="2.6s" repeatCount="indefinite"/></circle>
+ <path d="M0,6 C-18,-8 -8,-22 0,-12 C8,-22 18,-8 0,6 Z" fill="url(#btn)" transform="scale(1.7)"><animateTransform attributeName="transform" type="scale" values="1.6;1.95;1.6" dur="1.3s" repeatCount="indefinite" additive="replace"/></path></g>
+<text x="150" y="76" font-family="'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif" font-size="34" font-weight="800" fill="url(#txt)">Support this project</text>
+<text x="150" y="112" font-family="'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif" font-size="18" fill="#d9d4f5">If it helped you, a donation of any amount keeps it going.</text>
+<g transform="translate(660 60)"><rect width="170" height="50" rx="25" fill="url(#btn)"/>
+ <rect width="170" height="50" rx="25" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.18;0" dur="3s" repeatCount="indefinite"/></rect>
+ <text x="85" y="32" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">Donate via UPI  &#8594;</text></g>
+</svg>
