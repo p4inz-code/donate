@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Support my work · P4inz</title>
-<meta name="description" content="Support Kanvaz and my other tools with a UPI donation. Any amount.">
+<meta property="og:title" content="Support my work | P4inz">
+<meta property="og:description" content="Free tools, made alone. Buy me a coffee from anywhere, or UPI in India.">
+<meta name="description" content="Support my free tools. Buy me a coffee from anywhere in the world, or pay by UPI if you are in India. Any amount.">
 <meta name="theme-color" content="#140b26">
 <style>
   :root{--bg:#140b26;--panel:#1c1236;--line:#33244f;--text:#efeaff;--muted:#b3a9d1;--accent:#7c3aed;--accent-hi:#9b6bff}
@@ -45,6 +47,16 @@
   /* On a phone the button opens the UPI app. On a computer there is no UPI app, so the QR is shown instead. */
   @media (hover:none) and (pointer:coarse){.pay{display:flex}.qr,.scan{display:none}}
 
+
+  .card{border:1px solid var(--line);background:color-mix(in srgb,var(--panel) 70%,transparent);border-radius:16px;padding:20px 20px 18px;margin:22px 0 0}
+  .card h2{font:600 1.05rem/1.3 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0 0 4px}
+  .card h2 em{font-style:normal;color:var(--muted);font-weight:400;font-size:.9rem}
+  .bmc{display:flex;justify-content:center;align-items:center;gap:10px;min-height:52px;margin:14px 0 0;padding:0 20px;border-radius:12px;background:#FFDD00;color:#111;font-weight:700;font-size:1.05rem;text-decoration:none}
+  .bmc:hover{background:#ffe94d}
+  .bmc svg{width:22px;height:22px}
+  .bmcqr{display:block;width:132px;height:132px;margin:16px auto 0;border-radius:10px;background:#fff}
+  .card .qr{margin-top:14px}
+  .card .pay{margin-top:14px}
   a:focus-visible,button:focus-visible{outline:3px solid #cdb8ff;outline-offset:3px}
   footer{margin-top:42px;color:#9a8fbb;font-size:.85rem}
   footer a{color:#cdb8ff}
@@ -60,17 +72,29 @@
   </div>
 
   <h1>Support my work</h1>
-  <p>I make Kanvaz and a few other tools on my own, and they're free. If one of them saved you some time and you feel like chipping in, any amount helps. Thank you.</p>
-  <p class="small">No account and no subscription. It's a one-time UPI payment, and you pick the amount in your app.</p>
+  <p>I make Kanvaz, Obscura, Glint, MINK and a few other tools on my own, and they're free. If one of them saved you some time and you feel like chipping in, any amount helps. Thank you.</p>
+  <p class="small">No account, no subscription, no perks. Pick the amount yourself.</p>
 
-  <a class="pay" id="pay" href="upi://pay?pa=9321614988@jio&amp;pn=Atharva%20Patil&amp;cu=INR&amp;tn=Support%20P4inz">Pay with UPI</a>
+  <section class="card" aria-labelledby="h-bmc">
+    <h2 id="h-bmc">Anywhere in the world <em>cards and wallets</em></h2>
+    <a class="bmc" href="https://buymeacoffee.com/p4inz" rel="noopener">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 24h32v12a16 16 0 0 1-16 16h0a16 16 0 0 1-16-16V24Z"/><path d="M46 28h4a6 6 0 0 1 0 12h-5"/></svg>
+      Buy me a coffee
+    </a>
+    <img class="bmcqr" src="bmc-qr.svg" alt="QR code for buymeacoffee.com/p4inz" width="132" height="132">
+  </section>
 
-  <div class="qr"><img src="upi-qr.jpeg" alt="UPI QR code for Atharva Patil. Scan it with any UPI app." width="808" height="880"></div>
-  <p class="small scan">Scan with any UPI app.</p>
+  <section class="card" aria-labelledby="h-upi">
+    <h2 id="h-upi">In India <em>UPI, no fee</em></h2>
+    <a class="pay" id="pay" href="upi://pay?pa=9321614988@jio&amp;pn=Atharva%20Patil&amp;cu=INR&amp;tn=Support%20P4inz">Pay with UPI</a>
 
-  <div class="id"><code id="upiId">9321614988@jio</code><button id="copy" type="button" aria-label="Copy UPI ID">Copy</button></div>
+    <div class="qr"><img src="upi-qr.jpeg" alt="UPI QR code for Atharva Patil. Scan it with any UPI app." width="808" height="880"></div>
+    <p class="small scan">Scan with any UPI app.</p>
 
-  <footer>Atharva Patil | P4inz | Northbyte Studios · <a href="https://github.com/p4inz-code/kanvaz">Kanvaz on GitHub</a></footer>
+    <div class="id"><code id="upiId">9321614988@jio</code><button id="copy" type="button" aria-label="Copy UPI ID">Copy</button></div>
+  </section>
+
+  <footer>Atharva Patil | P4inz | Northbyte Studios · <a href="https://atharvapatil.tech/support/">All the free tools</a> · <a href="https://github.com/p4inz-code">GitHub</a></footer>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
