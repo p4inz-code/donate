@@ -9,7 +9,7 @@
 <meta name="description" content="Support my free tools. Buy me a coffee from anywhere in the world, or pay by UPI if you are in India. Any amount.">
 <meta name="theme-color" content="#140b26">
 <style>
-  :root{--bg:#140b26;--panel:#1c1236;--line:#33244f;--text:#efeaff;--muted:#b3a9d1;--accent:#7c3aed;--accent-hi:#9b6bff}
+  :root{--bg:#140b26;--panel:#1c1236;--line:#33244f;--text:#efeaff;--muted:#b3a9d1;--accent:#f0b45e;--accent-hi:#ffc878}
   *{box-sizing:border-box}
   html{background:var(--bg)}
   /* the profile picture, large and faded, as background art */
@@ -32,7 +32,7 @@
 
   .pay{
     display:none;justify-content:center;align-items:center;min-height:52px;margin:22px 0 6px;padding:0 20px;border-radius:12px;
-    background:var(--accent);color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none;
+    background:var(--accent);color:#1c1530;font-weight:700;font-size:1.05rem;text-decoration:none;
   }
   .pay:hover{background:var(--accent-hi)}
 
@@ -64,6 +64,40 @@
   .free a{color:#cdb8ff;font-weight:600}
   .free span{display:block;color:var(--muted);font-size:.9rem}
   .note{font:400 1.35rem/1.3 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;color:#f0b45e;margin:26px 0 0;transform:rotate(-1.5deg)}
+
+  /* hand-made touches */
+  .print{margin:30px 0 0;padding:12px 12px 10px;background:#f0ece4;border-radius:4px;box-shadow:0 18px 40px rgba(0,0,0,.45);transform:rotate(-1.6deg);position:relative;max-width:520px}
+  .print::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:28px;margin-left:-55px;background:rgba(232,214,170,.78);transform:rotate(3deg)}
+  .print img{display:block;width:100%;height:auto;border-radius:2px}
+  .print figcaption{font:400 1.2rem/1.2 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;color:#3a2f5c;text-align:center;padding:10px 0 2px}
+  h1{color:#f4efe4}
+
+  /* phones and narrow windows: the single column above stays */
+  .page{max-width:420px;margin:0 auto}
+  main{max-width:none}
+
+  /* tablets and desktops: landscape layout, big headline left, ways to give right */
+  @media (min-width:900px){
+    body{padding:56px 48px;display:flex;align-items:center}
+    body::before{width:min(60vw,820px);right:-8%;top:-18%;opacity:.2}
+    .page{max-width:1180px;width:100%;display:grid;grid-template-columns:1.05fr 1fr;column-gap:72px;row-gap:0;align-items:start}
+    .intro{position:sticky;top:48px}
+    h1{font-size:clamp(3.2rem,5.4vw,5rem);line-height:1.02;letter-spacing:-.02em;margin:6px 0 22px}
+    .intro p{font-size:1.15rem;max-width:34rem}
+    .who img{width:76px;height:76px}
+    .stack .card:first-child{margin-top:0}
+    .card{padding:24px 26px 22px}
+    .page footer{grid-column:1 / -1;margin-top:56px}
+    .qr{width:250px}
+  }
+  @media (min-width:1500px){
+    .page{max-width:1380px;column-gap:110px}
+    body{font-size:18px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .print{transition:transform .3s}
+    .print:hover{transform:rotate(-.4deg) translateY(-3px)}
+  }
   footer{margin-top:42px;color:#9a8fbb;font-size:.85rem}
   footer a{color:#cdb8ff}
   .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--line);padding:10px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none}
@@ -71,16 +105,23 @@
 </style>
 </head>
 <body>
-<main>
+<main class="page">
+<div class="intro">
   <div class="who">
     <img src="pfp.jpg" alt="P4inz profile picture" width="64" height="64">
     <div><b>Atharva Patil</b><span>P4inz</span></div>
   </div>
 
   <h1>Support my work</h1>
-  <p>I make Kanvaz, Obscura, Glint, MINK and a few other tools on my own, and they're free. If one of them saved you some time and you feel like chipping in, any amount helps. Thank you.</p>
+  <p>I make tools for artists and other people who make things: Kanvaz, Obscura, Glint, MINK and a few more. I build them alone and keep them free. If one saved you some time and you feel like chipping in, any amount helps. Thank you.</p>
   <p class="small">No account, no subscription, no perks. Pick the amount yourself.</p>
 
+  <figure class="print">
+    <img src="https://raw.githubusercontent.com/p4inz-code/kanvaz/main/assets/readme/wall.jpg" alt="Kanvaz boards pinned up like prints on a reference wall" loading="lazy">
+    <figcaption>made alone, for artists</figcaption>
+  </figure>
+</div>
+<div class="stack">
   <section class="card" aria-labelledby="h-bmc">
     <h2 id="h-bmc">Anywhere in the world <em>cards and wallets</em></h2>
     <a class="bmc" href="https://buymeacoffee.com/p4inz" rel="noopener">
@@ -111,6 +152,7 @@
   </section>
 
   <p class="note">thank you, really. Atharva</p>
+</div>
 
   <footer>Atharva Patil | P4inz | P4inz Interactive Labs · <a href="https://atharvapatil.tech/support/">All the free tools</a> · <a href="https://github.com/p4inz-code">GitHub</a></footer>
 </main>
