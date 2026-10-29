@@ -58,6 +58,12 @@
   .card .qr{margin-top:14px}
   .card .pay{margin-top:14px}
   a:focus-visible,button:focus-visible{outline:3px solid #cdb8ff;outline-offset:3px}
+  .free ul{list-style:none;margin:10px 0 0;padding:0}
+  .free li{padding:10px 0;border-top:1px dashed var(--line)}
+  .free li:first-child{border-top:0}
+  .free a{color:#cdb8ff;font-weight:600}
+  .free span{display:block;color:var(--muted);font-size:.9rem}
+  .note{font:400 1.35rem/1.3 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;color:#f0b45e;margin:26px 0 0;transform:rotate(-1.5deg)}
   footer{margin-top:42px;color:#9a8fbb;font-size:.85rem}
   footer a{color:#cdb8ff}
   .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--line);padding:10px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none}
@@ -93,6 +99,18 @@
 
     <div class="id"><code id="upiId">9321614988@jio</code><button id="copy" type="button" aria-label="Copy UPI ID">Copy</button></div>
   </section>
+
+  <section class="card free" aria-labelledby="h-free">
+    <h2 id="h-free">No money to spare? <em>These help just as much</em></h2>
+    <ul>
+      <li><a href="https://github.com/p4inz-code/kanvaz" rel="noopener">Star Kanvaz on GitHub</a><span>It is how other artists find it.</span></li>
+      <li><a href="https://github.com/p4inz-code/kanvaz/issues/new" rel="noopener">Report a bug or ask for a feature</a><span>Most of what ships comes from these.</span></li>
+      <li><a href="https://discord.gg/8UKt8s5FbW" rel="noopener">Join the Discord</a><span>Share a board, tell me what is missing.</span></li>
+      <li><a href="https://p4inz-code.github.io/kanvaz/guide/" rel="noopener">Tell one artist friend</a><span>Send them the guide, it has everything.</span></li>
+    </ul>
+  </section>
+
+  <p class="note">thank you, really. Atharva</p>
 
   <footer>Atharva Patil | P4inz | P4inz Interactive Labs · <a href="https://atharvapatil.tech/support/">All the free tools</a> · <a href="https://github.com/p4inz-code">GitHub</a></footer>
 </main>
